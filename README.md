@@ -26,9 +26,10 @@ in terminal or decompress using your software of choice.
 
 ### RUNNING APP
 
-* Open RStudio and set your working directory to the mirApp path location. To change your working directory in R, type in the R prompt: ```>setwd("path/to/mirApp")
+* Open RStudio and set your working directory to the mirApp path location. To change your working directory in R, type in the R prompt:
+```>setwd("path/to/mirApp")
 ```
-and replace ```"path/to/mirApp/""``` to your path.
+ and replace ```"path/to/mirApp/"``` to your path.
 
 * In RStudio, open **app.R**. In the top right corner of the code editor, press the "Run App" dropdown menu and run "Run in Window".
 
