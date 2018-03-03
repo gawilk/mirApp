@@ -6,18 +6,19 @@ Shiny app to plot SNPs modulating microRNA-gene interactions in tumors throughou
 * Must have R installed on your local machine. To install R, go to https://cran.r-project.org/mirrors.html and choose the mirror closest to your local. Follow the instructions for installation.
 
 * Once installed, open R and install packages "shiny" and "ggplot2". To install packages, type in the R prompt:
-```>install.packages(c("shiny", "ggplot2"))
-```
-Allow R to install any package dependencies.
 
-* Install RStudio to run the app. To install RStudio, go to https://www.rstudio.com/products/rstudio/download/ and follow the instructions for your local machine.
+ `>install.packages(c("shiny", "ggplot2"))`
+
+  Allow R to install any package dependencies.
+
+* Install RStudio to run the app. To install RStudio, go to https://www.rstudio.com/products/rstudio/download/ and follow the instructions for your operating system.
 
 ### GETTING STARTED
 
 * Download mirApp.tar.gz and untar it into whichever local directory you wish. To untar, type `tar -xvzf mirApp.tar.gz`
 in terminal or decompress using your software of choice.
 
-* Files:
+* What lives here:
   * **app.R** Shiny app code including UX and server side functions
   * **data/** directory containing all data files for running Shiny app.  
 
@@ -27,9 +28,8 @@ in terminal or decompress using your software of choice.
 ### RUNNING APP
 
 * Open RStudio and set your working directory to the mirApp path location. To change your working directory in R, type in the R prompt:
-```>setwd("path/to/mirApp")
-```
- and replace ```"path/to/mirApp/"``` to your path.
+`>setwd("path/to/mirApp")`
+ and replace `"path/to/mirApp/"` to your path.
 
 * In RStudio, open **app.R**. In the top right corner of the code editor, press the "Run App" dropdown menu and run "Run in Window".
 
