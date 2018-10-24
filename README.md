@@ -22,8 +22,7 @@ in terminal or decompress using your software of choice.
   * **app.R** Shiny app code including UX and server side functions
   * **data/** directory containing all data files for running Shiny app.  
 
-
-* NOTE! Data files are not included in the repo due to their size. Data files can be downloaded from https://tinyurl.com/mirAppData20180302 and should be placed in the data/ subdirectory.
+* NOTE! Data files are not included in the repo due to their size. Data files can be downloaded from https://northwestern.box.com/s/co7kzy6qo7c5dlwbilapnocg34j7zjiv and should be placed in the data/ subdirectory.
 
 ### RUNNING APP
 
@@ -39,3 +38,7 @@ the window before typing in your miRNA name.
 * The plots will appear in the "Plot" tab. Because the data is very large, the app may be slow and may take time to generate the figures. Please be patient!
 
 * If the app returns an error after your inputs (cancer type and miRNA name), this means that the miRNA is unconsidered within the cancer type in the study.
+
+### FULL RESULTS TABLES (without using Shiny)
+
+* Full tables of the regQTL analysis results for all trios may be downloaded as tab-separated files from https://northwestern.box.com/s/qwxeww6rrwmdlp4cxkiyf3pvot4j8sqx
