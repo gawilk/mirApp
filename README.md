@@ -41,4 +41,4 @@ the window before typing in your miRNA name.
 
 ### FULL RESULTS TABLES (without using Shiny)
 
-* Full tables of the regQTL analysis results for all trios may be downloaded as tab-separated files from https://northwestern.box.com/folder/56483039639
+* Full tables of the regQTL analysis results for all trios may be downloaded as tab-separated files from https://northwestern.app.box.com/s/jpmzlsrbnlilk5lm5i7mp9fyrmawdgih
