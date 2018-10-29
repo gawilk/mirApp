@@ -1,0 +1,3 @@
+# files to be ignored by git
+data/*
+!data/*.txt
