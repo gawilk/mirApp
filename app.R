@@ -80,14 +80,14 @@ server <- function(input, output) {
   
   selectedTrios <- reactive({
     switch(input$organ, 
-           "Breast" = {load("data/BRCAanovaTUMORClean.RData", envir = .GlobalEnv)
-             BRCAanovaTUMORClean},
-           "Liver" = {load("data/LIHCanovaTUMORClean.RData", envir = .GlobalEnv)
-             LIHCanovaTUMORClean},
-           "Lung" = {load("data/LUSCanovaTUMORClean.RData", envir = .GlobalEnv)
-             LUSCanovaTUMORClean},
-           "Prostate" = {load("data/PRADanovaTUMORClean.RData", envir = .GlobalEnv)
-             PRADanovaTUMORClean})
+           "Breast" = {load("data/BRCAregQTLPCA.RData", envir = .GlobalEnv)
+             BRCAregQTLPCA},
+           "Liver" = {load("data/LIHCregQTLPCA.RData", envir = .GlobalEnv)
+             LIHCregQTLPCA},
+           "Lung" = {load("data/LUSCregQTLPCA.RData", envir = .GlobalEnv)
+             LUSCregQTLPCA},
+           "Prostate" = {load("data/PRADregQTLPCA.RData", envir = .GlobalEnv)
+             PRADregQTLPCA})
   })
   
   selectedStats <- reactive({
@@ -165,9 +165,9 @@ server <- function(input, output) {
   })
   
   output$info <- renderPrint({
-    clickDF <- clickDF()[, c("miRNA", "gene", "snp", "rsID", "chrom", "pfdrONE")]
+    clickDF <- clickDF()[, c("miRNA", "gene", "snp", "rsID", "chrom", "pfdrONE", "maf")]
     rownames(clickDF) <- NULL
-    colnames(clickDF) <- c("miRNA", "gene", "snp", "rsID", "chrom", "pFDR")
+    colnames(clickDF) <- c("miRNA", "gene", "snp", "rsID", "chrom", "pFDR", "MAF")
     clickDF <- as.data.frame(clickDF, stringsAsFactors=FALSE)
     clickDF
   })
