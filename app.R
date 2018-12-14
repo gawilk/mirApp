@@ -20,8 +20,8 @@ ui <- shinyUI(fluidPage(
              plots for a tumor type."), 
     selectInput("organ", 
                 label = "Choose a cancer type to display",
-                choices = list("Breast", "Liver",
-                               "Lung", "Prostate"),
+                choices = list("Breast", "Breast ER+", "Breast PR+", 
+                	"Breast TN", "Liver", "Lung", "Prostate"),
                 selected = "Breast"),
     textInput("mir", label = "Choose a miRNA", 
     	value = "type in miRNA...(hsa-mir-XXX or hsa-let-XXX)"), 
@@ -82,6 +82,12 @@ server <- function(input, output) {
     switch(input$organ, 
            "Breast" = {load("data/BRCAregQTLPCA.RData", envir = .GlobalEnv)
              BRCAregQTLPCA},
+           "Breast ER+" = {load("data/BRCAERregQTLPCA.RData", envir = .GlobalEnv)
+           	 BRCAERregQTLPCA},
+           "Breast PR+" = {load("data/BRCAPRregQTLPCA.RData", envir = .GlobalEnv)
+             BRCAPRregQTLPCA}, 
+           "Breast TN" = {load("data/BRCANTNregQTLPCA.RData", envir = .GlobalEnv)
+           	 BRCANTNregQTLPCA},
            "Liver" = {load("data/LIHCregQTLPCA.RData", envir = .GlobalEnv)
              LIHCregQTLPCA},
            "Lung" = {load("data/LUSCregQTLPCA.RData", envir = .GlobalEnv)
@@ -94,6 +100,15 @@ server <- function(input, output) {
     switch(input$organ, 
            "Breast" = {load("data/BRCAstatsMat.RData", envir = .GlobalEnv)
              BRCAstatsMat},
+           "Breast ER+" = {load("data/BRCAstatsMat_ER_PCA_COMBO.RData", 
+           	envir = .GlobalEnv)
+            	BRCAstatsMat_ER_PCA_COMBO},
+           "Breast PR+" = {load("data/BRCAstatsMat_PR_PCA_COMBO.RData", 
+           	envir = .GlobalEnv)
+             BRCAstatsMat_PR_PCA_COMBO}, 
+           "Breast TN" = {load("data/BRCAstatsMat_NTN_PCA_COMBO.RData", 
+           	envir = .GlobalEnv)
+             BRCAstatsMat_NTN_PCA_COMBO},
            "Liver" = {load("data/LIHCstatsMat.RData", envir = .GlobalEnv)
              LIHCstatsMat},
            "Lung" = {load("data/LUSCstatsMat.RData", envir = .GlobalEnv)
